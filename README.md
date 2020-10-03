@@ -1,6 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### This project is an e-commerce website made using ReactJS and deployed on Firebase. 
+
+Some technologies used are- react-router, React Context API, material UI and PassportJS. 
+The styling is inspired from Amazon and the project fulfills some basic functionalities 
+of an e-commerce website. This was made as project work for a college course and it is
+only intended to be used for educational purposes.
+
 
 ## Available Scripts
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
