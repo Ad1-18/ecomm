@@ -9,7 +9,8 @@ function Header() {
     const [{basket}] = useStateValue();
     console.log(basket);
     const [{wishlist}] = useStateValue();
-
+    console.log(wishlist);
+    
     return (
         <nav className="header">
 
