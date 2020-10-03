@@ -54,10 +54,10 @@ function Header() {
 
                  {/*3rd link*/}
 
-                 <Link to="/wishlist" className="header__link">
+                 <Link to="/wl" className="header__link">
                     <div className="header__option">
                         <span className="header__optionLine1">Your</span>
-                        <span className="header__optionLine2 ">Wishlist<span className= "header__basketCount">{wishlist?.length}</span></span>
+                        <span className="header__optionLine2">Wishlist<span className= "header__basketCount">{wishlist?.length}</span></span>
                         
                     </div>
                 </Link>
