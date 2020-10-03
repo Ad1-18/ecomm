@@ -19,6 +19,19 @@ function Product({id,title,image,price,rating}) {
             },
         });
     };
+    const addtoWishlist = () => {
+        // Add item
+        dispatch({
+            type: 'ADD_TO_WISHLIST',
+            item: {
+                id: id,
+                title: title,
+                image: image,
+                price: price,
+                rating: rating,
+            },
+        });
+    };
 
     return (
         <div className="product">
@@ -41,7 +54,7 @@ function Product({id,title,image,price,rating}) {
             
             <img src = {image} alt=""/>
             <button onClick={addtoBasket}> Add to cart</button>
-            <button > Add to wishlist </button>
+            <button onClick={addtoWishlist}> Add to wishlist </button>
         </div>
     )
 }
