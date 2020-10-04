@@ -82,7 +82,7 @@ function Home() {
             title=  "Combo Offer- Black Hoodie + Yellow T-shirt with exclusive logo design"
             price = {1000}
             rating = {5}
-            image = {require('./ProdImg/offer.jpg')}
+            image = {require('./ProdImg/offer.png')}
             />
         </div>
         {/* Product */}
