@@ -4,7 +4,7 @@ import { useStateValue } from './StateProvider';
 
 function CheckoutProduct({id, title, image, price, rating}) {
 
-    const [{}, dispatch] = useStateValue();
+    const [{a}, dispatch] = useStateValue();
 
     const removeFromBasket = () => {
         // Remove from cart
@@ -17,14 +17,17 @@ function CheckoutProduct({id, title, image, price, rating}) {
         // Remove from cart and add to wishlist
 
         dispatch({
-            type: "REMOVE_FROM_BASKET",
-            id: id,
+            type: "ADD_TO_WISHLIST",
+            item: {
+                id: id,
+                title: title,
+                image: image,
+                price: price,
+                rating: rating,
+            },
         });
 
-        dispatch({
-            type: "ADD_TO_WISHLIST",
-            id: id,
-        });
+        removeFromBasket();
         
     };
 

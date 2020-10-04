@@ -30,6 +30,7 @@ function Wishlist() {
                    {wishlist?.map(item => (
 
                         <WishlistProduct
+                            item =  {item}
                             id = {item.id}
                             title = {item.title}
                             image = {item.image}

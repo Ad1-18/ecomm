@@ -7,6 +7,8 @@ export const initialState = {
 
 function reducer(state, action) {
     console.log(action);
+    console.log(state.basket);
+    console.log(state.wishlist)
 
     switch (action.type) {
         case "ADD_TO_BASKET":
@@ -27,13 +29,13 @@ function reducer(state, action) {
             if (cartIndex >= 0) {
                 // item is in cart
                 newBasket.splice(cartIndex, 1);
-            ;}
+            }
 
             else {
                 console.warn(
                     `The product (id: ${action.id}) is not in cart`
                 );
-            };
+            }
 
 
             return { 
@@ -59,13 +61,13 @@ function reducer(state, action) {
             if (listIndex >= 0) {
                 // item is in cart
                 newList.splice(listIndex, 1);
-            ;}
+            }
 
             else {
                 console.warn(
                     `The product (id: ${action.id}) is not in Wishlist`
                 );
-            };
+            }
 
 
             return { 

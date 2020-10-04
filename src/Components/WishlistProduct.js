@@ -16,30 +16,33 @@ function WishlistProduct({id, title, image, price, rating}) {
 
     const addToBasket = () => {
         // Remove from wishlist and add to cart
-        
-        dispatch({
-            type: "REMOVE_FROM_WISHLIST",
-            id: id,
-        });
+
         dispatch({
             type: "ADD_TO_BASKET",
-            id: id,
-        })
+            item: {
+                id: id,
+                title: title,
+                image: image,
+                price: price,
+                rating: rating,
+            },
+        });
+        removeFromWishlist();
     };
 
     return (
         <div className = "wishlistProduct">
-            <img className = "wishlist__image" src = {image} alt ="" />
+            <img className = "wishlistProduct__image" src = {image} alt ="" />
 
-            <div className = "wishlist__info">
-                <p className = "wishlist__title">
+            <div className = "wishlistProduct__info">
+                <p className = "wishlistProduct__title">
                     {title}
                 </p>
-                <p className = "wishlist__price">
+                <p className = "wishlistProduct__price">
                     <small>₹</small>
                     <strong>{price}</strong>
                 </p>
-                <div className = "wishlist__rating">
+                <div className = "wishlistProduct__rating">
                     {
                         Array(rating)
                         .fill()

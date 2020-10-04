@@ -1,12 +1,10 @@
-import React, {lazy, Suspense} from 'react';
+import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header.js";
 import Home from "./Home.js";
-//import Checkout from "./Checkout.js";
-const Checkout = lazy(() => import("./Checkout.js"))
-//import Wishlist from "./Wishlist.js";
-const Wishlist = lazy(() => import("./Wishlist.js"))
+import Checkout from "./Checkout.js";
+import Wishlist from "./Wishlist.js";
 
 function App() {
   return (
@@ -16,16 +14,12 @@ function App() {
       <h1></h1>
         <Switch>
           <Route path="/checkout">
-            <Suspense fallback = {<div> Loading ...</div>}>
-              <Header />
-              <Checkout />
-            </Suspense>
+            <Header />
+            <Checkout />
           </Route>
           <Route path="/wl">
-            <Suspense fallback = {<div> Loading ...</div>}>
-              <Header />
-              <Wishlist />
-            </Suspense>
+            <Header />
+            <Wishlist />
           </Route>
           <Route path="/login">
             <h1> Login page </h1>
