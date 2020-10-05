@@ -37,8 +37,6 @@ function Checkout() {
                         />
 
                    ))}
-
-
                </div>
            )}
         </div>
