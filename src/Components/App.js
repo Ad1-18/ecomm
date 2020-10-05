@@ -5,7 +5,6 @@ import Header from "./Header.js";
 import Home from "./Home.js";
 import Checkout from "./Checkout.js";
 import Wishlist from "./Wishlist.js";
-import Purchase from "./Purchase.js";
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
           <Route path="/checkout">
             <Header />
             <Checkout />
-            <Purchase />
           </Route>
           <Route path="/wl">
             <Header />
