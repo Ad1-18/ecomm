@@ -1,9 +1,10 @@
 export const initialState = {
      basket: [],
      wishlist: [],
-     user: null,
+     user: [],
 };
-
+export const getBasketTotal = (basket) =>
+basket?.reduce((amount,item) => item.price + amount, 0);
 
 function reducer(state, action) {
     console.log(action);
@@ -11,6 +12,13 @@ function reducer(state, action) {
     console.log(state.wishlist)
 
     switch (action.type) {
+
+        case "SET_USER":
+            return {
+                ...state,
+                user: action.user
+            }
+
         case "ADD_TO_BASKET":
         // Logic for add item to cart
 
@@ -73,6 +81,13 @@ function reducer(state, action) {
             return { 
                 ...state, 
                 wishlist: newList
+            };
+        case "EMPTY_ALL":
+            // On signout
+            return{
+                ...state,
+                basket: [],
+                wishlist: [],
             };
 
         default:

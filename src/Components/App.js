@@ -1,12 +1,44 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header.js";
 import Home from "./Home.js";
 import Checkout from "./Checkout.js";
 import Wishlist from "./Wishlist.js";
+import Login from "./Login.js";
+import { useStateValue } from "./StateProvider";
+import { auth } from "./Firebase.js"
 
 function App() {
+  const [{user},dispatch] = useStateValue();
+
+  // Use Effect hook
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(authUser => {
+      if (authUser) {
+        // User is logged in
+        dispatch({
+          type: "SET_USER",
+          user: authUser,
+        })
+      }
+      else {
+        // User is logged out
+        dispatch({
+          type: "SET_USER",
+          user: null,
+        })
+      }
+    });
+
+    return() => {
+      // Cleanup
+      unsubscribe();
+    }
+  }, []);
+
+  console.log("USER IS>>",user);
+
   return (
 
     <Router>
@@ -22,7 +54,7 @@ function App() {
             <Wishlist />
           </Route>
           <Route path="/login">
-            <h1> Login page </h1>
+            <Login />
           </Route>
           {/* This is the default route */}
           <Route path="/">    
