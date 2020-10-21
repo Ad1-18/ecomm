@@ -4,7 +4,7 @@ import { useStateValue } from './StateProvider';
 
 function WishlistProduct({id, title, image, price, rating}) {
 
-    const [{}, dispatch] = useStateValue();
+    const [{counter}, dispatch] = useStateValue();
 
     const removeFromWishlist = () => {
         // Remove from wishlist
@@ -54,6 +54,7 @@ function WishlistProduct({id, title, image, price, rating}) {
 
                 <button onClick= {addToBasket}>Add to Cart</button>
                 <button onClick = {removeFromWishlist}>Remove from Wishlist</button>
+                <p>There are {counter.length?counter.length:null} people interested in this</p>
             </div> 
         </div>
     )

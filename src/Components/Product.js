@@ -2,7 +2,7 @@ import React from 'react';
 import './Product.css';
 import { useStateValue } from "./StateProvider.js";
 
-function Product({id,title,image,price,rating}) {
+function Product({id,title,image,price,rating,review}) {
 
     const [{}, dispatch] = useStateValue();
 
@@ -53,6 +53,7 @@ function Product({id,title,image,price,rating}) {
             </div>
             
             <img src = {image} alt=""/>
+            <p className ="product__review"><strong>Review:</strong><em> {review}</em></p>
             <button onClick={addtoBasket}> Add to cart</button>
             <button onClick={addtoWishlist}> Add to wishlist </button>
         </div>

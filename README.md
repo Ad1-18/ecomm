@@ -1,10 +1,15 @@
 ### This project is an e-commerce website made using ReactJS and deployed on Firebase. 
 
-Some technologies used are- react-router, React Context API, material UI and PassportJS. 
+Some technologies used are- react-router, React Context API, Material UI Firebase. 
 The styling is inspired from Amazon and the project fulfills some basic functionalities 
 of an e-commerce website. This was made as project work for a college course and it is
-only intended to be used for educational purposes.
+only intended to be used for educational purposes. People in the team are- Adwaiya Srivastav, 
+Jay Bhushan, Saravan Chilamakuri.
 
+References- 
+1.MERN stack tutorial -> https://www.youtube.com/watch?v=7CqJlxBYj-M
+2.React tutorial -> https://www.youtube.com/watch?v=DLX62G4lc44&t=1378s
+3.Git&Github tutorial -> https://www.youtube.com/watch?v=RGOj5yH7evk&t=1234s
 
 ## Available Scripts
 

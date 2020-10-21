@@ -9,9 +9,9 @@ function Wishlist() {
     return (
         <div className= "wishlist"> 
             <img 
-           className = "wishlist__banner"
-           src = {require('./ProdImg/checkoutbanner.jpg')}
-           alt = "" />
+                className = "wishlist__banner"
+                src = {require('./ProdImg/checkoutbanner.jpg')}
+                alt = "" />
 
            {wishlist?.length === 0 ? (
                <div>

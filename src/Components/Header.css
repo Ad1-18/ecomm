@@ -70,3 +70,10 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.header__link2 {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-decoration: none;
+}

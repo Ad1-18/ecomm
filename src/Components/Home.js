@@ -20,6 +20,7 @@ function Home() {
             price = {549}
             rating = {5}
             image = {require('./ProdImg/red.png')}
+            review = "I am 5.8 and bought S size, it fits me well. Product is good"
             />
             <Product 
             id="2"
@@ -27,6 +28,7 @@ function Home() {
             price = {549}
             rating = {4}
             image = {require('./ProdImg/blue.png')}
+            review = "Great product, will buy again"
             />
         </div>
         <div className = "home__row">
@@ -37,6 +39,7 @@ function Home() {
             price = {549}
             rating = {5}
             image = {require('./ProdImg/black.png')}
+            review = "Wonderful product, I ordered size medium, exactly fit to my body. Quality is nice."
             />
             <Product 
             id="4"
@@ -44,6 +47,7 @@ function Home() {
             price = {549}
             rating = {3}
             image = {require('./ProdImg/white.png')}
+            review = "Excellent Quality and Excellent colour."
             />
             <Product 
             id="5"
@@ -51,6 +55,7 @@ function Home() {
             price = {749}
             rating = {4}
             image = {require('./ProdImg/ghood.png')}
+            review = "Nice product!!! Color is a bit different but fitting is great!"
             />
         </div>
         <div className = "home__row">
@@ -60,6 +65,7 @@ function Home() {
             price = {749}
             rating = {5}
             image = {require('./ProdImg/rhood.png')}
+            review = "Must buy for everyone!"
             />
             <Product 
             id="7"
@@ -67,6 +73,7 @@ function Home() {
             price = {749}
             rating = {5}
             image = {require('./ProdImg/bhood.png')}
+            review = "I bought this during the sale event for 599rs and I absolutely love it."
             />
             <Product 
             id="8"
@@ -74,6 +81,7 @@ function Home() {
             price = {749}
             rating = {3}
             image = {require('./ProdImg/grhood.png')}
+            review = "Just got out in Amazon sale. Looks like nice, and has a good feel"
             />
         </div>
         <div className = "home__row">
@@ -83,6 +91,7 @@ function Home() {
             price = {1000}
             rating = {5}
             image = {require('./ProdImg/offer.png')}
+            review = "Great combo offer, product has a great feel and fits well."
             />
         </div>
         {/* Product */}

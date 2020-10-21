@@ -1,5 +1,6 @@
 .product__rating{
     display:flex;
+    text-align: left;
 }
 .product__info{
     height:100px;
@@ -7,6 +8,9 @@
 }
 .product__price{
     margin-top: 5px;
+}
+.product__review{
+    margin-bottom: 5px;
 }
 .product{
     display:flex;

@@ -6,8 +6,10 @@ import Home from "./Home.js";
 import Checkout from "./Checkout.js";
 import Wishlist from "./Wishlist.js";
 import Login from "./Login.js";
+import Users from "./Users.js"
 import { useStateValue } from "./StateProvider";
 import { auth } from "./Firebase.js"
+import UserDetails from './UserDetails';
 
 function App() {
   const [{user},dispatch] = useStateValue();
@@ -55,6 +57,12 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path = "/user">
+            <Users />
+          </Route>
+          <Route path = "/user1">
+            <UserDetails/>
           </Route>
           {/* This is the default route */}
           <Route path="/">    

@@ -2,14 +2,18 @@ export const initialState = {
      basket: [],
      wishlist: [],
      user: [],
+     counter: [],
+     user_details:[]
 };
+
 export const getBasketTotal = (basket) =>
 basket?.reduce((amount,item) => item.price + amount, 0);
 
 function reducer(state, action) {
     console.log(action);
     console.log(state.basket);
-    console.log(state.wishlist)
+    console.log(state.wishlist);
+    console.log("USER DETAILS>>",state.user_details);
 
     switch (action.type) {
 
@@ -53,10 +57,11 @@ function reducer(state, action) {
 
         case "ADD_TO_WISHLIST":
         // Logic for add item to cart
-
+            console.log("COUNTER>>",state.counter)
             return  {
                 ...state,
-                wishlist: [...state.wishlist, action.item]
+                wishlist: [...state.wishlist, action.item],
+                counter: [...state.counter, action.item]
             };
 
         case "REMOVE_FROM_WISHLIST":
@@ -64,7 +69,7 @@ function reducer(state, action) {
 
             let newList = [...state.wishlist];
             const listIndex = state.wishlist.findIndex((item) => item.id === action.id);
-
+            console.log("INDEX>>", listIndex)
 
             if (listIndex >= 0) {
                 // item is in cart
@@ -77,11 +82,11 @@ function reducer(state, action) {
                 );
             }
 
-
             return { 
                 ...state, 
                 wishlist: newList
             };
+
         case "EMPTY_ALL":
             // On signout
             return{
@@ -89,6 +94,12 @@ function reducer(state, action) {
                 basket: [],
                 wishlist: [],
             };
+        case "UPDATE_USER_INFO":
+
+            return{
+                ...state,
+                user_details: [state.user, action.item],
+            }
 
         default:
             
